@@ -169,6 +169,16 @@ allprojects {
   }
 }
 
+plugins {
+  id("org.sonarqube") version("3.5.0.2730")
+}
+/*
+ ./gradlew sonar \
+   -Dsonar.projectKey=qomg_android-starter_AYz2Dptbq-TatmEidXTx \
+   -Dsonar.host.url=http://localhost:9000 \
+   -Dsonar.login=sqp_b8a0dc44bf5a40a21926c8713ca7e1149ebf36e0
+*/
 tasks.register("clean", Delete::class) {
   delete(rootProject.buildDir)
 }
+
